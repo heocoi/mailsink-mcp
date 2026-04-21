@@ -1,0 +1,55 @@
+{
+  "name": "@mailsink/mcp",
+  "version": "0.1.2",
+  "description": "MCP server for MailSink — programmatic temporary email inboxes for AI agents and test automation.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mailsink",
+    "email",
+    "otp",
+    "verification",
+    "testing",
+    "claude",
+    "cursor",
+    "ai-agents"
+  ],
+  "homepage": "https://mailsink.dev",
+  "bugs": {
+    "url": "https://github.com/heocoi/mailsink-mcp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heocoi/mailsink-mcp.git"
+  },
+  "license": "MIT",
+  "author": "anhphong <hello@mailsink.dev>",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "typescript": "^5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
